@@ -26,18 +26,17 @@ public class SkyView {
     }
     public double getAverage(int sr,int er, int sc, int ec)
     {
-        double avgdiv = (er-sr)*(ec-sc);
         double count =0.0;
-
+        int z = 0;
         for(int i=sr;i<=er;i++)
         {
             for(int j=sc;j<=ec;j++)
             {
                 count += view[i][j];
-
+                z++;
             }
         }
-        return count/avgdiv;
+        return count/z;
     }
     public String toString()
     {
